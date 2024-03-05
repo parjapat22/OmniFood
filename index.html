@@ -2,7 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <meta http-equip="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon-64.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
 
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -23,7 +33,13 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <title>Omni Food</title>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <title>Omni Food - Never cook again!</title>
   </head>
 
   <body>
@@ -34,11 +50,13 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">How it works</a></li>
-          <li><a class="main-nav-link" href="#">Meals</a></li>
-          <li><a class="main-nav-link" href="#">Testimonials</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+          <li><a class="main-nav-link" href="#how">How it works</a></li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
         </ul>
       </nav>
 
@@ -63,11 +81,11 @@
               nutritional needs.
             </p>
 
-            <a href="#" class="btn btn--full margin-right-sm"
+            <a href="#cta" class="btn btn--full margin-right-sm"
               >Start eating healthy</a
             >
 
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#how" class="btn btn--outline">Learn more &darr;</a>
 
             <div class="delivered-meals">
               <div class="delivered-imgs">
@@ -103,11 +121,16 @@
           </div>
 
           <div class="hero-img-box">
-            <img
-              src="./img/hero.png"
-              class="hero-img"
-              alt="woman enjoying food, meals in storage container, and food bowls on a table"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-img"
+                alt="woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -127,7 +150,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -197,7 +220,7 @@
       </section>
 
       <!-- section meals -->
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -323,7 +346,7 @@
       </section>
 
       <!-- section testimonials -->
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <!-- testimonials column -->
         <div class="testimonials-container">
           <span class="subheading">Testimonials</span>
@@ -449,7 +472,7 @@
       </section>
 
       <!-- section pricing -->
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -581,7 +604,7 @@
       </section>
 
       <!-- section cta & form -->
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -592,13 +615,14 @@
                 first meal is on us!
               </p>
 
-              <form class="cta-form" action="#">
+              <form class="cta-form" action="#" name="sign-up" netlify>
                 <div>
                   <label for="full-name">Full name</label>
                   <input
                     id="full-name"
                     type="text"
                     placeholder="John Smith"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -609,13 +633,14 @@
                     id="email"
                     type="email"
                     placeholder="me@example.com"
+                    name="email"
                     required
                   />
                 </div>
 
                 <div>
                   <label for="select-where">Where did you hear about us?</label>
-                  <select id="select-where" required>
+                  <select id="select-where" name="select-where" required>
                     <option value="">Please choose one option:</option>
                     <option value="friends">Friends and family</option>
                     <option value="youtube">YouTube video</option>
@@ -669,7 +694,8 @@
           </ul>
 
           <p class="copyright">
-            Copyright &copy; 2024 by Omnifood, Inc. All rights reserved.
+            Copyright &copy; <span class="year">2024</span> by Omnifood, Inc.
+            All rights reserved.
           </p>
         </div>
 
