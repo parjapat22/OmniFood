@@ -1,5 +1,7 @@
 # Omni Food Responsive Website
 
+This project is focused on front-end and responsiveness of the website. Therefore, form submission is out of scope.
+
 ## Tech Stack
 
 HTML5, CSS3, JavaScript
@@ -21,6 +23,10 @@ Hamburger menu icon is implemented using JavaScript and fully functional on mobi
 ### Compatibility
 
 This website is compatible with most popular browsers.
+
+## Known Issues
+
+This project is focused on front-end and responsiveness of the website. Therefore, form submission is out of scope.
 
 ## Project Type
 
