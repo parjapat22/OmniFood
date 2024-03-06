@@ -200,7 +200,7 @@ body {
   display: inline-block;
   color: #e67e22;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid transparent;
   padding-bottom: 2px;
   transition: all 0.3s;
 }
@@ -208,7 +208,7 @@ body {
 .link:hover,
 .link:active {
   color: #cf711f;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid currentColor;
 }
 
 .list {
@@ -232,9 +232,9 @@ body {
   color: #e67e22;
 }
 
-*:focus {
+/* *:focus {
   box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
-}
+} */
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
