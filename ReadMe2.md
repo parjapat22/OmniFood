@@ -26,7 +26,15 @@ This website is compatible with most popular browsers.
 
 ## Known Issues
 
-This project is focused on front-end and responsiveness of the website. Therefore, form submission is out of scope.
+### Form Submission
+
+This project is focused on front-end and responsiveness of the website. Therefore, form submission is out of scope.\
+It will be fixed soon.
+
+### Active Menu
+
+Active menu is not highlighted in the navigation bar.\
+It will be fixed soon.
 
 ## Project Type
 
