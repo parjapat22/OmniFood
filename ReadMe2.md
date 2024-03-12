@@ -28,8 +28,7 @@ This website is compatible with most popular browsers.
 
 ### Form Submission
 
-This project is focused on front-end and responsiveness of the website. Therefore, form submission is out of scope.\
-It will be fixed soon.
+This project is focused on front-end and responsiveness of the website. Therefore, form submission is out of scope.
 
 ### Active Menu
 
